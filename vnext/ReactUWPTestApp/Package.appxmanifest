@@ -7,7 +7,7 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="87fc81ab-83a8-412b-bec2-37f8f47d4b06"
+    Name="ReactUWPTestApp"
     Publisher="CN=canli"
     Version="1.0.0.0" />
 

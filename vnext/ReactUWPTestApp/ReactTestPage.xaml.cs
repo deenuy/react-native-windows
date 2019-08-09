@@ -27,7 +27,7 @@ namespace ReactUWPTestApp
     public ReactTestPage()
     {
       this.InitializeComponent();
-      AutomationProperties.SetName(this, "ReactTestPage");
+      AutomationProperties.SetAutomationId(this, "ReactTestPage");
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e)

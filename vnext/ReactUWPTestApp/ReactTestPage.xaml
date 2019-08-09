@@ -10,6 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-      <reactnative:ReactControl x:Name="RootElement" />
+    <reactnative:ReactControl x:Name="RootElement"/>
     </Grid>
 </Page>

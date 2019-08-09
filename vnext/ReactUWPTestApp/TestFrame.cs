@@ -18,6 +18,7 @@ namespace ReactUWPTestApp
   {
     private Type _mainPageType = null;
     private Button _backButton = null;
+    private Button _goBackInvokerButton = null;
     private TextBlock _currentPageTextBlock = null;
 
     public TestFrame(Type mainPageType)
@@ -31,9 +32,15 @@ namespace ReactUWPTestApp
       base.OnApplyTemplate();
 
       this.Navigated += TestFrame_Navigated;
+
+      // NOTE: The "BackButton" element automatically has a handler hooked up to it by Frame
+      // just by being named "BackButton"
       _backButton = (Button)GetTemplateChild("BackButton");
       _currentPageTextBlock = (TextBlock)GetTemplateChild("CurrentPageTextBlock");
       _currentPageTextBlock.Text = "Home";
+
+      _goBackInvokerButton = (Button)GetTemplateChild("GoBackInvokerButton");
+      _goBackInvokerButton.Click += GoBackInvokerButton_Click;
 
     }
 
@@ -54,6 +61,14 @@ namespace ReactUWPTestApp
       GC.Collect();
       GC.WaitForPendingFinalizers();
       GC.Collect();
+    }
+
+    private void GoBackInvokerButton_Click(object sender, RoutedEventArgs e)
+    {
+      if (CanGoBack)
+      {
+        GoBack();
+      }
     }
   }
 }

@@ -28,7 +28,7 @@ namespace ReactUWPTestApp
     {
       this.InitializeComponent();
 
-      AutomationProperties.SetName(this, "MainPage");
+      AutomationProperties.SetAutomationId(this, "MainPage");
       Loaded += OnLoaded;
     }
 
@@ -43,6 +43,7 @@ namespace ReactUWPTestApp
       automationPeer.RaiseAutomationEvent(AutomationEvents.AsyncContentLoaded);
       itemsControl.ItemsSource = Tests;
       NavigateToTestCommand.Frame = this.Frame;
+      TestHelper.UpdateTestContentLoadedCheckBox(this.Frame, isChecked: true);
     }
 
     public List<TestDeclaration> Tests

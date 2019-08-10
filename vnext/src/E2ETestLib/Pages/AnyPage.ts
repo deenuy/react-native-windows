@@ -1,7 +1,8 @@
-import { PageObject, IAppiumDriver } from 'selenium-appium';
+import { IAppiumDriver } from 'selenium-appium';
 import { WebElementCondition, until } from 'selenium-webdriver';
 import { HomePage } from './HomePage';
-import { PageHelper } from './PageHelper';
+import { PageHelper } from '../PageHelper';
+import {PageObject} from './pageobject'
 
 export class AnyPage extends PageObject {
   isReadyConditions(): WebElementCondition[] {

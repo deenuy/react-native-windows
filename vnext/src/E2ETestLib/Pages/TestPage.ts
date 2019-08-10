@@ -1,5 +1,5 @@
 import { WebElementCondition, until } from 'selenium-webdriver';
-import { PageHelper } from './PageHelper';
+import { PageHelper } from '../PageHelper';
 import { AnyPage } from './AnyPage';
 import { IAppiumDriver } from 'selenium-appium';
 

@@ -1,7 +1,7 @@
 import { appiumDriver } from '../testsetup'
-import { PageHelper } from '../pageObjects/PageHelper';
-import { TextInputTestPage } from '../pageObjects/TextInputTestPage'
-import { gotoPage } from 'selenium-appium'
+import {  HomePage  } from '../../E2ETestLib/index';
+//import { gotoPage} from 'selenium-appium'
+
 
 jest.setTimeout(30000);
 
@@ -14,13 +14,16 @@ afterAll(() => {
 });
 
 
-describe("TestInputTestPage", () => {
+describe("TestInputTestPage test", () => {
   beforeAll(() => {
-    return PageHelper.gotoHomePage(appiumDriver);
+   // return PageHelper.gotoHomePage(appiumDriver);
+   //new TextInputTestPage(appiumDriver);
+   
   });
 
   test('First', async () => {
-    gotoPage(TextInputTestPage, appiumDriver);
+    //gotoPage(AnyPage, appiumDriver);
+    new HomePage(appiumDriver);
   });
 
 

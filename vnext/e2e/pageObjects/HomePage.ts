@@ -1,8 +1,7 @@
-import { By2, IAppiumDriver } from 'selenium-appium';
+import { PageObject, By2, IAppiumDriver } from 'selenium-appium';
 import { WebElementCondition, until } from 'selenium-webdriver';
-import { PageHelper } from '../PageHelper';
+import { PageHelper } from './PageHelper';
 import { TextInputTestPage } from './TextInputTestPage';
-import {PageObject} from './pageobject'
 
 export class HomePage extends PageObject {
   isReadyConditions(): WebElementCondition[] {

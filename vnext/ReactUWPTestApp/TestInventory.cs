@@ -1,8 +1,7 @@
-using System;
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReactUWPTestApp
 {
@@ -12,7 +11,7 @@ namespace ReactUWPTestApp
     {
       Tests = new List<TestDeclaration>
             {
-                new TestDeclaration("TextInputTestPage", typeof(ReactTestPage)),
+                new TestDeclaration("TextInputTestPage", typeof(ReactTestPage), "ReactUWPTestApp/TextInputTestPage"),
             };
     }
 

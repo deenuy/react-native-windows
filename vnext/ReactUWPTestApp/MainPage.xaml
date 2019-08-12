@@ -23,10 +23,10 @@
         <ItemsControl.ItemTemplate>
           <DataTemplate>
             <Button
-                        Content="{Binding Name}"
+                        Content="{Binding AutomationId}"
                         CommandParameter="{Binding}"
                         Command="{StaticResource NavigateToTestCommand}"
-                        AutomationProperties.AutomationId="{Binding Name}"
+                        AutomationProperties.AutomationId="{Binding AutomationId}"
                         MinWidth="250"
                         Margin="2"
                         />

@@ -1,5 +1,8 @@
-// For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
+/**
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License.
+ * @format
+ */
 
 module.exports = {
 
@@ -9,6 +12,6 @@ module.exports = {
   ],
 
   projects: ['e2e'],
-  testEnvironment: "node",
+  testEnvironment: 'node',
 
 };

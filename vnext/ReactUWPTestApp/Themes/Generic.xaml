@@ -4,13 +4,8 @@
     xmlns:local="using:ReactUWPTestApp">
 
   <Style x:Key="AutomationHelperStyle" TargetType="Control">
-    <Setter Property="IsTabStop" Value="False"/>
-    <Setter Property="IsHitTestVisible" Value="False"/>
-    <Setter Property="Width" Value="0"/>
-    <Setter Property="Height" Value="0"/>
-    <Setter Property="Opacity" Value="0"/>
   </Style>
-  
+
   <Style TargetType="local:TestFrame" >
     <Setter Property="Template">
       <Setter.Value>
@@ -18,12 +13,14 @@
           <Grid x:Name="RootGrid">
             <Grid.RowDefinitions>
               <RowDefinition Height="Auto"/>
-              <RowDefinition Height="0"/>
               <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Grid x:Name="TestFrameBar" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <Grid x:Name="TestFrameBar" VerticalAlignment="Top" HorizontalAlignment="Left">
               <StackPanel Orientation="Horizontal">
+                <Button x:Name="HomeButton" AutomationProperties.AutomationId="__HomeButton">
+                  <SymbolIcon Symbol="Home"/>
+                </Button>
                 <Button x:Name="BackButton" 
                                         AutomationProperties.AutomationId="__BackButton" 
                                         Width="48"
@@ -32,21 +29,11 @@
                                         Background="{ThemeResource SystemControlBackgroundAccentBrush}">
                   <SymbolIcon Symbol="Back"/>
                 </Button>
-
                 <TextBlock x:Name="CurrentPageTextBlock" AutomationProperties.AutomationId="__CurrentPage"  FontSize="18" VerticalAlignment="Center" Margin="10,0,0,0"/>
               </StackPanel>
             </Grid>
 
-            <Grid x:Name="AutomationHelpersPanel" Grid.Row="1">
-
-              <!-- Automation Helpers -->
-              <!-- These are not visible, but are used via UIA. They are fundamental to the operation of our test automation, so they should not be collapsed since 
-                                that prevents them from showing up in the UIA tree.-->
-              <Button x:Name="GoBackInvokerButton" AutomationProperties.AutomationId="__GoBackInvoker" Style="{StaticResource AutomationHelperStyle}" />
-              <CheckBox x:Name="TestContentLoadedCheckBox" IsChecked="False" AutomationProperties.AutomationId="__TestContentLoadedCheckBox" Content="TestContentLoadedCheckbox"  Style="{StaticResource AutomationHelperStyle}" />
-            </Grid>
-
-            <ContentPresenter Grid.Row="2"
+            <ContentPresenter Grid.Row="1"
                                     Content="{TemplateBinding Content}"
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"

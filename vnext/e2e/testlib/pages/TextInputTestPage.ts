@@ -1,4 +1,4 @@
-import { TestPage } from './TestPage';
+import { TestPage } from './Pages';
 import { IAppiumDriver } from 'selenium-appium';
 
 export class TextInputTestPage extends TestPage {

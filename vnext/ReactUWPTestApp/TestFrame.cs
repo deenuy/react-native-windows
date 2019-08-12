@@ -1,16 +1,10 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Documents;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Templated Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234235
 
 namespace ReactUWPTestApp
 {
@@ -18,7 +12,7 @@ namespace ReactUWPTestApp
   {
     private Type _mainPageType = null;
     private Button _backButton = null;
-    private Button _goBackInvokerButton = null;
+    private Button _homeButton = null;
     private TextBlock _currentPageTextBlock = null;
 
     public TestFrame(Type mainPageType)
@@ -39,8 +33,8 @@ namespace ReactUWPTestApp
       _currentPageTextBlock = (TextBlock)GetTemplateChild("CurrentPageTextBlock");
       _currentPageTextBlock.Text = "Home";
 
-      _goBackInvokerButton = (Button)GetTemplateChild("GoBackInvokerButton");
-      _goBackInvokerButton.Click += GoBackInvokerButton_Click;
+      _homeButton = (Button)GetTemplateChild("HomeButton");
+      _homeButton.Click += HomeButton_Click;
 
     }
 
@@ -63,7 +57,7 @@ namespace ReactUWPTestApp
       GC.Collect();
     }
 
-    private void GoBackInvokerButton_Click(object sender, RoutedEventArgs e)
+    private void HomeButton_Click(object sender, RoutedEventArgs e)
     {
       if (CanGoBack)
       {

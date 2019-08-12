@@ -17,8 +17,7 @@
     "format:verify": "node Scripts/formatFiles.js -i -style=file -assume-filename=../.clang-format -verify",
     "lint": "just-scripts eslint",
     "lint:fix": "eslint ./**/*.js ./**/*.ts? --fix",
-    "watch": "tsc -w",
-    "appium": "appium"
+    "watch": "tsc -w"
   },
   "rnpm": {
     "haste": {
@@ -52,18 +51,13 @@
     "@types/es6-promise": "0.0.32",
     "@types/react": "16.8.15",
     "@types/react-native": "~0.57.51",
-    "@types/selenium-webdriver": "^4.0.1",
-    "appium": "^1.14.1",
     "clang-format": "1.2.4",
     "eslint": "5.1.0",
     "eslint-plugin-prettier": "2.6.0",
-    "jest": "^24.8.0",
     "just-scripts": "^0.24.2",
     "prettier": "1.13.6",
     "react": "16.8.3",
     "react-native": "https://github.com/microsoft/react-native/archive/v0.59.0-microsoft.35.tar.gz",
-    "selenium-appium": "0.0.4",
-    "selenium-webdriver": "^4.0.0-alpha.4",
     "typescript": "3.5.1"
   },
   "peerDependencies": {

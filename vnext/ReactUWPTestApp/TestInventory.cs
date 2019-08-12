@@ -11,7 +11,7 @@ namespace ReactUWPTestApp
     {
       Tests = new List<TestDeclaration>
             {
-                new TestDeclaration("TextInputTestPage", typeof(ReactTestPage), "ReactUWPTestApp/TextInputTestPage"),
+                new TestDeclaration("TextInputTestPage", typeof(ReactTestPage), "ReactUWPTestApp/TextInputTestPage", "TextInputTestPage"),
             };
     }
 

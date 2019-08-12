@@ -62,7 +62,7 @@
     "prettier": "1.13.6",
     "react": "16.8.3",
     "react-native": "https://github.com/microsoft/react-native/archive/v0.59.0-microsoft.35.tar.gz",
-    "selenium-appium": "D:\\repo\\selenium-appium",
+    "selenium-appium": "0.0.4",
     "selenium-webdriver": "^4.0.0-alpha.4",
     "typescript": "3.5.1"
   },
